@@ -41,3 +41,6 @@ foreach ($file in $htmlFiles) {
     # Preprocess the HTML content and write to the output file
     cl /P /EP /Fi"$outputFilePath" /D FILE="$contentPath" $contentPath ./layout.html
 }
+
+$outLayout = $directoryPath + "layout.html"
+Remove-Item -Path $outLayout -Force
